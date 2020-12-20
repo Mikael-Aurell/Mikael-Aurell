@@ -2,6 +2,7 @@ package se.lexicon;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class Exercise1 {
     public static void main(String[] args) {
@@ -13,6 +14,8 @@ public class Exercise1 {
             System.out.println("0 = Exit");
             System.out.println("1 = SingleArray (Exercise1)");
             System.out.println("2 = IndexOf (Exercise2)");
+            System.out.println("3 = SortStringArray (Exercise3)");
+            System.out.println("4 = CopyArray Exercise4");
             System.out.println("-----------Copyright Aurell-Gaming------------");
             System.out.println();
             System.out.print(" Choose Which game above you want to play or exit: ");
@@ -28,6 +31,12 @@ public class Exercise1 {
                 case "2":
                     indexOf();
                     break;
+                case "3":
+                    sortStringArray();
+                    break;
+                /*case "4":
+                    copyStringArray();
+                    break;*/
                 case "0":
                     break;
 
@@ -131,16 +140,36 @@ public class Exercise1 {
                     }
                 }
             }
-            /*System.out.println("Do you want to play Again? (J/N)");
-            Scanner scannerFinish = new Scanner(System.in);
-            String inputFinish = scannerFinish.nextLine();
 
-            if (inputFinish.equalsIgnoreCase("N")) {
-                finish = true;*/
             finish = yesOrNo();
 
         }
     }
+
+    public static void sortStringArray() {
+
+        boolean finish = false;
+
+        while (!finish) {
+
+            String[] capitals = new String[arraySize()];
+
+            IntStream.range(0, capitals.length).forEach(i -> {
+                int downInt = capitals.length - i;
+                System.out.print("You have: " + downInt + " more strings to enter. \n Please enter the string of array index [" + i + "]: ");
+                Scanner capitalScanner = new Scanner(System.in);
+                capitals[i] = capitalScanner.nextLine();
+            });
+
+            Arrays.sort(capitals);
+
+            for (String string_ : capitals) {
+             System.out.println(string_);
+            }
+            finish = yesOrNo();
+        }
+    }
+
 
         //Methods here that reuses in the different games methods
         public static int arraySize(){
