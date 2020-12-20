@@ -16,7 +16,8 @@ public class Exercise1 {
             System.out.println("2 = IndexOf (Exercise2)");
             System.out.println("3 = SortStringArray (Exercise3)");
             System.out.println("4 = CopyArray Exercise4");
-            System.out.println("5 = addValuesTwoDimensionalArray Exercise5");
+            System.out.println("5 = AddValuesTwoDimensionalArray Exercise5");
+            System.out.println("6 = AverageIntArray (Exercise6)");
             System.out.println("-----------Copyright Aurell-Gaming------------");
             System.out.println();
             System.out.print(" Choose Which game above you want to play or exit: ");
@@ -40,6 +41,9 @@ public class Exercise1 {
                     break;
                 case "5":
                     addValuesTwoDimensionalArray();
+                    break;
+                case "6":
+                    averageIntArray();
                     break;
                 case "0":
                     break;
@@ -234,6 +238,33 @@ public class Exercise1 {
         }
     }
 
+    public static void averageIntArray() {
+        boolean finish = false;
+
+        while (!finish) {
+            int[] numberArray = {43, 5, 23, 17, 2, 14};
+            System.out.println("The array numbers are : ");
+
+            for (int numbers : numberArray
+            ) {
+                System.out.print(numbers + ",");
+            }
+            System.out.println();
+
+            double sum = 0;
+            for (int i = 0; i < numberArray.length; i++) {
+                sum = sum + numberArray[i];
+            }
+            double averageNumber = sum / numberArray.length;
+
+            System.out.println("The average is: ");
+            System.out.printf("%.1f", averageNumber);
+            System.out.println();
+
+            finish = yesOrNo();
+        }
+    }
+
 
         //Methods here that reuses in the different games methods
         public static int arraySize(){
@@ -244,7 +275,7 @@ public class Exercise1 {
             return size;
         }
         public static boolean yesOrNo(){
-            System.out.println("Do you want to play Again? (Y/N)");
+            System.out.print("Do you want to play Again? (Y/N) ");
             Scanner scannerYesOrNo = new Scanner(System.in);
             String inputFinish = scannerYesOrNo.nextLine();
 
