@@ -5,9 +5,9 @@ import java.util.Scanner;
 import java.util.stream.IntStream;
 
 public class Exercise1 {
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 
-        String inputFinish;
+        /*String inputFinish;
 
         do {
             System.out.println("-----------List of Games----------------------");
@@ -30,9 +30,8 @@ public class Exercise1 {
                 case "1":
                     addSingleArray();
                     break;
-
                 case "2":
-                    indexOf();
+                    Exercise2.indexOf();
                     break;
                 case "3":
                     sortStringArray();
@@ -63,7 +62,7 @@ public class Exercise1 {
             while (!inputFinish.equalsIgnoreCase("N"));
 
         System.out.println("Thanks for playing this game!");
-    }
+    }*/
 
 
     public static void addSingleArray() {
@@ -80,7 +79,7 @@ public class Exercise1 {
 
              }
 
-             int[] intArray = new int[arraySize()];
+             int[] intArray = new int[App.arraySize()];
 
              System.out.println();
 
@@ -100,7 +99,7 @@ public class Exercise1 {
 
              System.out.println();
 
-             finish = yesOrNo();
+             finish = App.yesOrNo();
 
              if (!finish) {
                  firstTime = false;
@@ -108,11 +107,8 @@ public class Exercise1 {
          }
     }
 
-    public static void indexOf() {
-        /*  Create a program and create a method with name ‘indexOf’ which will find and return the index
-            of an element in the array. If the element does not exist your method should return -1 as value.
-            Expected output:Index position of number 5 is: 2
-        */
+    /*public static void indexOf() {
+
         boolean finish = false;
 
         while(!finish) {
@@ -156,9 +152,9 @@ public class Exercise1 {
             finish = yesOrNo();
 
         }
-    }
+    }*/
 
-    public static void sortStringArray() {
+    /*public static void sortStringArray() {
 
         boolean finish = false;
 
@@ -180,9 +176,9 @@ public class Exercise1 {
             }
             finish = yesOrNo();
         }
-    }
+    }*/
 
-    public static void copyStringArray() {
+    /*public static void copyStringArray() {
 
         boolean finish = false;
 
@@ -204,9 +200,9 @@ public class Exercise1 {
             }
             finish = yesOrNo();
         }
-    }
+    }*/
 
-    public static void addValuesTwoDimensionalArray() {
+    /*public static void addValuesTwoDimensionalArray() {
 
         boolean finish = false;
 
@@ -240,9 +236,9 @@ public class Exercise1 {
 
             finish=yesOrNo();
         }
-    }
+    }*/
 
-    public static void averageIntArray() {
+    /*public static void averageIntArray() {
         boolean finish = false;
 
         while (!finish) {
@@ -267,9 +263,9 @@ public class Exercise1 {
 
             finish = yesOrNo();
         }
-    }
+    }*/
 
-    public static void unevenIntArray() {
+    /*public static void unevenIntArray() {
         boolean finish = false;
         int j=0;
         while (!finish) {
@@ -303,9 +299,10 @@ public class Exercise1 {
             finish = yesOrNo();
 
         }
-    }
+    }*/
+
         //Methods here that reuses in the different games methods
-        public static int arraySize(){
+        /*public static int arraySize(){
             int size;
             System.out.print("Please choose the length of the array: ");
             Scanner intScanner = new Scanner(System.in);
@@ -318,7 +315,7 @@ public class Exercise1 {
             String inputFinish = scannerYesOrNo.nextLine();
 
             return inputFinish.equalsIgnoreCase("N");
-        }
+        }*/
 }
 
 
