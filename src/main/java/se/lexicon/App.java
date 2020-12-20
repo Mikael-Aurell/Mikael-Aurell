@@ -13,10 +13,11 @@ public class App {
             System.out.println("1 = SingleArray (Exercise1)");
             System.out.println("2 = IndexOf (Exercise2)");
             System.out.println("3 = SortStringArray (Exercise3)");
-            System.out.println("4 = CopyArray Exercise4");
-            System.out.println("5 = AddValuesTwoDimensionalArray Exercise5");
+            System.out.println("4 = CopyArray (Exercise4)");
+            System.out.println("5 = AddValuesTwoDimensionalArray (Exercise5)");
             System.out.println("6 = AverageIntArray (Exercise6)");
-            System.out.println("7 = UnevenIntArray Exercise7");
+            System.out.println("7 = UnevenIntArray (Exercise7)");
+            System.out.println("8 = RemoveDuplicateArray (Exercise8)");
             System.out.println("-----------Copyright Aurell-Gaming------------");
             System.out.println();
             System.out.print(" Choose Which game above you want to play or exit: ");
@@ -45,6 +46,9 @@ public class App {
                     break;
                 case "7":
                     Exercise7.unevenIntArray();
+                    break;
+                case "8":
+                    Exercise8.removeDuplicateArray();
                     break;
                 case "0":
                     end = true;

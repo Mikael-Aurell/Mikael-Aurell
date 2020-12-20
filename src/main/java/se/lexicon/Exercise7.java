@@ -27,6 +27,8 @@ public class Exercise7 {
                 }
             }
 
+            Arrays.sort(unEvenNumbers);
+
             System.out.println("The uneven numbers are: ");
             for (int number: unEvenNumbers) {
                 System.out.print(number + ", ");
