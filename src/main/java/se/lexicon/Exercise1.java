@@ -1,6 +1,5 @@
 package se.lexicon;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.IntStream;
@@ -17,6 +16,7 @@ public class Exercise1 {
             System.out.println("2 = IndexOf (Exercise2)");
             System.out.println("3 = SortStringArray (Exercise3)");
             System.out.println("4 = CopyArray Exercise4");
+            System.out.println("5 = addValuesTwoDimensionalArray Exercise5");
             System.out.println("-----------Copyright Aurell-Gaming------------");
             System.out.println();
             System.out.print(" Choose Which game above you want to play or exit: ");
@@ -37,6 +37,9 @@ public class Exercise1 {
                     break;
                 case "4":
                     copyStringArray();
+                    break;
+                case "5":
+                    addValuesTwoDimensionalArray();
                     break;
                 case "0":
                     break;
@@ -192,6 +195,42 @@ public class Exercise1 {
                 System.out.println(string_);
             }
             finish = yesOrNo();
+        }
+    }
+
+    public static void addValuesTwoDimensionalArray() {
+
+        boolean finish = false;
+
+        while (!finish) {
+
+            int arraySize_ = 2;
+            String[][] arrayTwoDim = new String[arraySize_][arraySize_];
+            arrayTwoDim[0][0] = "Finland";
+            arrayTwoDim[0][1] = "Helsinki";
+
+            Scanner scannerCountry = new Scanner(System.in);
+            System.out.print("Type a Country ");
+            arrayTwoDim[1][0] = scannerCountry.nextLine();
+
+            Scanner scannerCapital = new Scanner(System.in);
+            System.out.print("Type the countries capital: ");
+            arrayTwoDim[1][1] = scannerCapital.nextLine();
+            System.out.println();
+
+            System.out.println("List of");
+            System.out.println("------------------------");
+            System.out.println("Countries \tCapitols");
+            for (int i = 0; i < arraySize_; i++) {
+                for (int j = 0; j < arraySize_; j++) {
+                    System.out.print(arrayTwoDim[i][j]+"   \t");
+                }
+                System.out.println();
+            }
+            System.out.println("------------------------");
+            System.out.println();
+
+            finish=yesOrNo();
         }
     }
 
