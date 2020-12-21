@@ -18,6 +18,7 @@ public class App {
             System.out.println("6 = AverageIntArray (Exercise6)");
             System.out.println("7 = UnevenIntArray (Exercise7)");
             System.out.println("8 = RemoveDuplicateArray (Exercise8)");
+            System.out.println("9 = ExpandNumberArray (Exercise9)");
             System.out.println("-----------Copyright Aurell-Gaming------------");
             System.out.println();
             System.out.print(" Choose Which game above you want to play or exit: ");
@@ -49,6 +50,9 @@ public class App {
                     break;
                 case "8":
                     Exercise8.removeDuplicateArray();
+                    break;
+                case "9":
+                    Exercise9.expandNumberArray();
                     break;
                 case "0":
                     end = true;
